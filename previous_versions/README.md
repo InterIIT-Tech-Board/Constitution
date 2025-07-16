@@ -1,9 +1,9 @@
 # Naming Convention
 
 The filename of previous versions  of the constitution should follow the following naming convention.
-
+```
   <date-of-last-amendment(YYYYMMDD)>-<latest Host IIT tag>-constitution.pdf
-
+```
 
 
 # IIT Tags
