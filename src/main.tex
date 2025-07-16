@@ -1,0 +1,149 @@
+\documentclass[letterpaper,12pt,titlepage]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{ragged2e}
+\usepackage{fancyhdr}
+\usepackage[all]{nowidow}
+\usepackage{url}
+\usepackage{tocloft}
+\usepackage[headheight=110pt]{geometry}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{enumitem}
+
+
+% Font size definitions
+\makeatletter
+\renewcommand\normalsize{\@setfontsize\normalsize{12}{14}}
+\renewcommand\small{\@setfontsize\small{10}{12}}
+\renewcommand\scriptsize{\@setfontsize\scriptsize{7}{8}}
+\renewcommand\tiny{\@setfontsize\tiny{5}{6}}
+\renewcommand\large{\@setfontsize\large{13}{15}}
+\renewcommand\Large{\@setfontsize\Large{14}{16}}
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesection.\thesubsection.\arabic{subsubsection}}
+% \renewcommand{\theparagraph}{\alph{paragraph}}
+\renewcommand{\theparagraph}{}
+\renewcommand{\thesubparagraph}{\roman{subparagraph}}
+\titleformat{\section}[block]{\normalfont\normalsize\scshape\center}{\thesection.}{1em}{}
+\titleformat{\subsection}[block]{\normalfont\itshape\center}{\thesubsection.}{1em}{}
+\titleformat{\subsubsection}{\normalfont}{\thesubsubsection.}{1em}{}
+% \titleformat{\paragraph}[runin]{\normalfont}{\theparagraph.}{1em}{}
+\titleformat{\paragraph}[runin]{\normalfont}{}{0pt}{}
+\titleformat{\subparagraph}[runin]{\normalfont\small}{\thesubparagraph.}{1em}{}
+\titlespacing{\subparagraph}{0pt}{12pt}{12pt}
+\makeatother
+
+\titlespacing*{\paragraph}{0pt}{10pt}{1em}
+\titlespacing*{\subparagraph}{0pt}{8pt}{1em}
+
+\renewcommand\contentsname{\hspace*{\fill}\normalfont\normalsize\scshape Index\hspace*{\fill}}   
+\renewcommand\cftsecfont{\normalfont\normalsize\scshape}
+\renewcommand\cftsubsecfont{\normalfont\normalsize\itshape}
+\renewcommand\cftsubsubsecfont{\normalfont\normalsize}
+\renewcommand\cftparafont{\normalfont\normalsize}
+\renewcommand\cftsubparafont{\normalfont\small}
+\renewcommand\cftsecpagefont{\normalfont\normalsize}
+\renewcommand\abstractname{\normalfont\normalsize\scshape Abstract}
+
+\setcounter{secnumdepth}{5}
+\setcounter{tocdepth}{2}
+
+\cftsetindents{section}{3em}{3em}
+\cftsetindents{subsection}{4em}{3em}
+\cftsetindents{subsubsection}{5em}{3em}
+\cftsetindents{paragraph}{6em}{3em}
+\cftsetindents{subparagraph}{7em}{3em}
+
+% \setlist[enumerate,1]{label=\roman*., leftmargin=*}
+\setlist[enumerate,1]{label=\textbullet, leftmargin=*}
+\setlist[enumerate,2]{label=--, leftmargin=*}
+
+\renewcommand{\sectionmark}[1]{\markboth{#1}{}}
+
+\fancypagestyle{mypagestyle}{%
+  \fancyhead[L]{\uppercase{\leftmark}} % Centered section title
+  \fancyhead[R]{\thepage} % Page number on the right
+  \renewcommand{\headrulewidth}{0pt}% Removes header rule
+}
+\pagestyle{mypagestyle}
+
+\title{\Huge{\uppercase{\textbf{Constitution of the InterIIT Tech Meet}}}}
+\date{}
+
+\begin{document}
+\urlstyle{same}
+
+\begin{titlepage}
+\maketitle
+\end{titlepage}
+
+
+\thispagestyle{empty}
+
+\tableofcontents
+\clearpage
+
+\section{Preamble}
+\input{sections/preamble.tex}
+
+\newpage
+\section{Version History}
+\input{sections/version_history.tex}
+
+\newpage
+\section{Definitions}
+\input{sections/definitions.tex}
+
+\newpage
+\section{Aims and Objectives}
+\input{sections/aims_and_objectives.tex}
+
+\newpage
+\section{General Rules}
+\input{sections/general_rules.tex}
+
+\newpage
+\section{InterIIT Tech Board}
+\input{sections/tech_board.tex}
+
+\newpage
+\section{Eligibility}
+\input{sections/eligibility.tex}
+
+\newpage
+\section{Selection of the Host IIT}
+\input{sections/host_selection.tex}
+
+\newpage
+\section{Responsibilities of the Host IIT}
+\input{sections/host_responsibilities.tex}
+
+\newpage
+\section{Responsibilities of Participating IITs}
+\input{sections/participant_responsibilities.tex}
+
+\newpage
+\section{Event Structure}
+\input{sections/event_structure}
+
+\newpage
+\section{Results \& Ranking}
+\input{sections/results_ranking}
+
+\newpage
+\section{Public Relations \& Media Outreach}
+\input{sections/public_relations.tex}
+
+\newpage
+\section{IP Policy}
+\input{sections/ip_policy.tex}
+
+\newpage
+\section{Provisions to Make Amendments}
+\input{sections/amendments.tex}
+
+\end{document}
